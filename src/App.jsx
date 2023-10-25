@@ -59,7 +59,8 @@ function App() {
               <p>{data.name}</p>
             </div>
             <div className="temp">
-              <h1 className="bold">{data.main.temp} C</h1>
+              <h1 className="bold">{data.main.temp} C
+              </h1>
               <p>{data.weather[0].description}</p>
             </div>
           </div>
