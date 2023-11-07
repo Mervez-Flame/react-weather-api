@@ -43,7 +43,7 @@ function App() {
 
 
     return (
-      <div className="app">
+      <div className="app bg-blue-200 p-4 rounded-lg shadow-lg h-screen">
         <div className="search">
           <input
             type="text"
@@ -53,29 +53,26 @@ function App() {
             placeholder="Enter Location"
           />
         </div>
-        <div className="container">
+        <div className="container flex items-center space-x-4">
           <div className="top">
-            <div className="location">
+            <div className="location text-2xl font-bold">
               <p>{data.name}</p>
             </div>
             <div className="temp">
-              <h1 className="bold">{data.main.temp} C
+              <h1 className="bold text-3xl font-semibold">{data.main.temp} C
               </h1>
               <p>{data.weather[0].description}</p>
             </div>
           </div>
-          <div className="bottom">
-            <div className="feels">
-              <p className="bold">{data.main.feels_like} C</p>
-              <p>Feels Like</p>
+          <div className="bottom text-gray-600">
+            <div className="feels ">
+              <p className="bold"> Feels Like: {data.main.feels_like}°C</p>
             </div>
             <div className="humidity">
-              <p className="bold">{data.main.humidity}%</p>
-              <p>Humidity</p>
+              <p className="bold text-gray-600">Humidity: {data.main.humidity}%</p>
             </div>
-            <div className="wind">
-              <p className="bold">{data.wind.speed} MPH</p>
-              <p>Wind Speed</p>
+            <div className="wind text-gray-600 ">
+              <p className="bold">Wind Speed: {data.wind.speed}MPH</p>
             </div>
           </div>
           {error && <p className="error">{error}</p>}
